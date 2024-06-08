@@ -15,6 +15,8 @@
     <header class="header">
 
         <h1>Index Document</h1>
+        
+        <a href="./blog.html"><input class="blogs-button" type="button" value="Blogs"></a>
 
         <input type="button" class="light-dark-mode-button" value="🌞">
 
@@ -36,23 +38,21 @@
 
             <div class="blog-item">
                 <label for="username">Username: </label>
-                <input type="text" name="username" id="username" required>
+                <input type="text" name="username" id="username" required />
             </div>
 
             <div class="blog-item">
-                <label for="contentTitle">Title: </label>
-                <input type="text" name="content-title" id="contentTitle" required>
+                <label for="contentTitle">Blog title: </label>
+                <input type="text" name="content-title" id="contentTitle" required />
             </div>
 
             <div class="blog-item content-area">
-                <label for="content" class="content-label">Content: </label>
-                <textarea name="content" id="content" class="content-box"></textarea>
+                <label for="content" class="content-label">Blog content: </label>
+                <textarea class="content-box" name="content" id="content" required></textarea>
             </div>
 
             <div class="blog-item">
-                <a href="./blog.html">
-                    <input type="button" value="Submit">
-                </a>
+                    <button>Submit</button>
             </div>
 
         </form>
