@@ -23,5 +23,7 @@ header {
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     border-top: double 10px var(--main-dark-contrast);
 }
