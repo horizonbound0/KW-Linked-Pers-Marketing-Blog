@@ -1,0 +1,27 @@
+:root {
+    --main-light-color: #EEEEEE;
+    --main-dark-color: #686d76;
+    --main-dark-contrast: #373A40;
+    --main-color-contrast: #DC5F00;
+}
+
+* {
+    margin: 5px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--main-light-color);
+    color: var(--main-dark-contrast);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: double 10px var(--main-dark-contrast);
+}
+
+footer {
+    border-top: double 10px var(--main-dark-contrast);
+}

@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: var(--main-light-color);
+    background: var(--main-light-color);
     color: var(--main-dark-contrast);
 }
 
@@ -23,7 +23,7 @@ header {
 }
 
 .light-dark-mode-button:hover {
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px var(--main-color-contrast);
 }
 
 .main {
@@ -39,6 +39,8 @@ header {
 }
 
 .hero img {
+    padding: 0;
+    border: solid var(--main-dark-contrast);
     height: 80%;
 }
 
