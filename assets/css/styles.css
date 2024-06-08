@@ -17,9 +17,55 @@ body {
 }
 
 header {
-    border: solid 2px var(--main-dark-contrast);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: double 10px var(--main-dark-contrast);
 }
 
-.blogForm {
-    border: solid 1px var(--main-dark-contrast);
+.light-dark-mode-button:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+.main {
+    display: flex;
+    height: 1000px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.hero img {
+    height: 80%;
+}
+
+.blog-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: end;
+    width: 50%;
+    height: 75%;
+    border-left: solid 5px var(--main-dark-contrast);
+}
+
+.blog-form h2 {
+    align-self: center;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+}
+
+.content-box {
+    width: 100%;
+    height: 100%;
 }
