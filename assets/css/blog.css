@@ -22,6 +22,19 @@ header {
     border-bottom: double 10px var(--main-dark-contrast);
 }
 
+.light-dark-mode-button:hover {
+    box-shadow: 5px 5px 10px var(--main-color-contrast);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+}
+
 footer {
+    display: flex;
+    justify-content: space-between;
     border-top: double 10px var(--main-dark-contrast);
 }
