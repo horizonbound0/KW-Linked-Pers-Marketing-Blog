@@ -11,9 +11,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+body[data-bg="light"] {
     background: var(--main-light-color);
     color: var(--main-dark-contrast);
+}
+
+body[data-bg="dark"] {
+    background: var(--main-dark-color);
+    color: var(--main-light-color);
 }
 
 header {
