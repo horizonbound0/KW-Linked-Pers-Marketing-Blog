@@ -12,7 +12,7 @@ NA
 
 To use the blog site you type in the relevant information in each section of the prompt, then when you click submit it takes you to the page that stores the blogs. Every field in the blog form is required for submission. There is a blog button in the header of the page to take you to the blog page before submitting a blog, and a back button to return to the main page from the blog page.
 
-Link to the blog website: 
+Link to the blog website: [https://horizonbound0.github.io/KW-Linked-Pers-Marketing-Blog/index.html](https://horizonbound0.github.io/KW-Linked-Pers-Marketing-Blog/index.html)
 
 ![The main page of the blog site](./assets/images/Screenshot1.PNG)
 
