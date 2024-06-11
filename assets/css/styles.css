@@ -36,6 +36,27 @@ header {
     height: 1000px;
 }
 
+.main-blogs {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+}
+
+
+.blog-card {
+    border: solid 1px;
+}
+
+.blog-title {
+    border-bottom: solid 2px;
+}
+
+.blog-author {
+    justify-self: end;
+}
+
+
 .hero {
     display: flex;
     flex-direction: column;

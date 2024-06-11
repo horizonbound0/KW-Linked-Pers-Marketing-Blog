@@ -17,39 +17,59 @@ const blogTitleEl = document.getElementById('content-title');
 const blogContentEl = document.getElementById('content');
 
 // making an object array to pass into local storage
-const blogsArray = [];
+let blogsArray = [];
 
-// making the function that will put the user's blog values into an object, then shove the object into our array.
 
-function storeBlogInfo() {
-    let blog = {
 
-        username: "",
-        title: "",
-        content: ""
+// grabbing blogs from local storage and putting them into the array
+if (localStorage.getItem('blogs') != null) {
 
-    }
+    console.log(localStorage.getItem('blogs'));
 
-    blog.username = usernameEl.value;
-    blog.title = blogTitleEl.value;
-    blog.content = blogContentEl.value;
+    // set blogs array to the parsed storage
+    blogsArray = JSON.parse(localStorage.getItem('blogs'));
 
-    blogsArray.push(blog);
+    console.log(blogsArray);
 
-    if(blog.username !== "" && blog.title !== "" && blog.content !== "") {
+} else {
 
-        window.location.href = "./blog.html";
-
-        usernameEl.value = "";
-        blogTitleEl.value = "";
-        blogContentEl.value = "";
-    
-    }
+    console.log('No blogs in local');
 
 }
 
+function storeBlogInfo() {
+
+    // declaring the blog object
+    let blog = {};
+
+    // get the blogs that are currently in local storage
+
+    blog.username = usernameEl.value;
+    console.log('username is: ' + blog.username);
+    blog.title = blogTitleEl.value;
+    console.log('username is: ' + blog.title);
+    blog.content = blogContentEl.value;
+    console.log('username is: ' + blog.content);
+
+    if (blog.username !== "" && blog.title !== "" && blog.content !== "") {
+
+        blogsArray.push(blog);
+
+        localStorage.setItem('blogs', JSON.stringify(blogsArray));
+
+        console.log(blogsArray);
+        console.log(localStorage.getItem('blogs'));
+
+        window.location.href = "./blog.html";
+
+        document.querySelector('.blog-form').reset();
+
+
+    }
+}
+
 // function to change background color and font color when the dark mode button is clicked
-function lightDarkMode (event) {
+function lightDarkMode(event) {
     const element = event.target;
 
     // make sure the element clicked in the light / dark mode button
@@ -59,12 +79,12 @@ function lightDarkMode (event) {
             element.value = element.dataset.light;
         } else if (document.body.dataset.bg === "dark") {
             document.body.dataset.bg = "light";
-            element.value = element.dataset.dark;            
+            element.value = element.dataset.dark;
         }
     }
 }
 
-/**/
+
 // creating the event listener that will change the mode from light to dark
 headerEl.addEventListener('click', lightDarkMode);
 
