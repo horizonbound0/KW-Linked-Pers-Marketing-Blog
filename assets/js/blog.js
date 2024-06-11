@@ -23,7 +23,7 @@ function createBlogs() {
 
         // add the text content and classes to our blog elements
         for (const blog of blogsArray) {
-            
+
             // variables for creating HTML elements
             const blogCard = document.createElement('section');
             const blogTitle = document.createElement('h2');
@@ -57,6 +57,13 @@ function createBlogs() {
 
 createBlogs();
 
+// Check to see if the local storage bg-mode is light or dark, then set the background accordingly
+if(localStorage.getItem('bg-mode') === 'light') {
+    document.body.dataset.bg = "light";
+} else if (localStorage.getItem('bg-mode') === 'dark') {
+    document.body.dataset.bg = "dark";
+}
+
 // function to change background color and font color when the dark mode button is clicked
 function lightDarkMode(event) {
     const element = event.target;
@@ -64,9 +71,11 @@ function lightDarkMode(event) {
     // make sure the element clicked in the light / dark mode button
     if (element.matches(".light-dark-mode-button")) {
         if (document.body.dataset.bg === "light") {
+            localStorage.setItem('bg-mode', 'dark');
             document.body.dataset.bg = "dark";
             element.value = element.dataset.light;
         } else if (document.body.dataset.bg === "dark") {
+            localStorage.setItem('bg-mode', 'light')
             document.body.dataset.bg = "light";
             element.value = element.dataset.dark;
         }
