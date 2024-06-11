@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
 
     <title>Marketing User Portfolio</title>
+
 </head>
 
-<body data-state="light-mode" data-bg-light="var(--main-light-color)" data-bg-dark="var(--main-dark-color)">
+<body 
+data-bg="light">
 
     <header class="header">
 
@@ -18,7 +22,9 @@
         
         <a href="./blog.html"><input class="blogs-button" type="button" value="Blogs"></a>
 
-        <input type="button" class="light-dark-mode-button" value="🌞">
+        <input type="button" class="light-dark-mode-button" value="🌛"
+        data-light="🌞"
+        data-dark="🌛">
 
     </header>
 
@@ -52,7 +58,7 @@
             </div>
 
             <div class="blog-item submit-button">
-                    <button type="button">Submit</button>
+                    <button>Submit</button>
             </div>
 
         </form>

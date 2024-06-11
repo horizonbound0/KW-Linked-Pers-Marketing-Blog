@@ -11,9 +11,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+body[data-bg="light"] {
     background: var(--main-light-color);
     color: var(--main-dark-contrast);
+}
+
+body[data-bg="dark"] {
+    background: var(--main-dark-color);
+    color: var(--main-light-color);
 }
 
 header {
@@ -30,6 +35,27 @@ header {
     display: flex;
     height: 1000px;
 }
+
+.main-blogs {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+}
+
+
+.blog-card {
+    border: solid 1px;
+}
+
+.blog-title {
+    border-bottom: solid 2px;
+}
+
+.blog-author {
+    justify-self: end;
+}
+
 
 .hero {
     display: flex;
