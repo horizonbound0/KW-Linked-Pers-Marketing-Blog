@@ -55,3 +55,5 @@ lightDarkModeButton.addEventListener('click', function (event) {
 
 // add event listener to the blog-form button to pass the blog values into local storage in the form of an object
 blogSubmitButtonEl.addEventListener('click', storeBlogInfo);
+
+// TESTING A PUSH
