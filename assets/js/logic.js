@@ -57,3 +57,5 @@ lightDarkModeButton.addEventListener('click', function (event) {
 blogSubmitButtonEl.addEventListener('click', storeBlogInfo);
 
 // TESTING A PUSH
+
+// TESTING ANOTHER PUSH TO DEVELOP ONLY
